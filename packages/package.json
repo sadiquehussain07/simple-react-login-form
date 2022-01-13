@@ -1,7 +1,7 @@
 {
-  "name": "sp-ui-library",
+  "name": "simple-login-form",
   "version": "1.0.0",
-  "description": "React ui component library",
+  "description": "React simple login form compoenent",
   "main": "index.js",
   "scripts": {
     "start": "rollup -c rollup.config.js -w",
@@ -9,12 +9,13 @@
     "test": "jest"
   },
   "keywords": [
-    "ui",
-    "library",
-    "reusable",
+    "Login",
+    "Login",
+    "Form",
     "Component",
     "boilerplate",
-    "react"
+    "react",
+    "login"
   ],
   "author": "Sadique Poolwala",
   "license": "ISC",
