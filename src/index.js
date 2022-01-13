@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss'
-import SimpleLoginForm from './SimpleLoginForm';
+import SimpleLoginForm from '../packages/src/SimpleLoginForm';
 export const Wrapper = (props) => {
     return (
         <div>{props.children}</div>

@@ -10,7 +10,7 @@ describe("<SimpleLoginForm />", () => {
     });
 
 
-    test('check redeucer', () => {
+    test('check reducer', () => {
         const initialState = {
             SLF_username: {
                 value: '',
