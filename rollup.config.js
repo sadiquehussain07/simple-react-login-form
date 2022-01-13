@@ -4,6 +4,7 @@ import babel from '@rollup/plugin-babel';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import replace from '@rollup/plugin-replace';
+import scss from "rollup-plugin-scss";
 export default {
   input: "src/index.js",
   output: {
@@ -16,7 +17,7 @@ export default {
       extensions: [".js"],
     }),
     replace({
-      'process.env.NODE_ENV': JSON.stringify( 'development' )
+      'process.env.NODE_ENV': JSON.stringify('production')
     }),
     babel({
       presets: ["@babel/preset-react"],
@@ -25,11 +26,15 @@ export default {
     serve({
       open: true,
       verbose: true,
-      contentBase: ["", "public"],
+      contentBase: ["dist", "public"],
       host: "localhost",
       port: 3000,
     }),
     livereload({ watch: "dist" }),
-    
+    scss({
+      output: "./dist/style.css",
+      failOnError: true,
+    }),
+
   ]
 };
